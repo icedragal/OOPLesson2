@@ -5,7 +5,7 @@ public class Flower {
     private String flowerName;
     private String country;
     private  double cost;
-    int lifeSpan;
+    private int lifeSpan;
 
     public Flower(String flowerName, String country, double cost, int lifeSpan) {
         if (flowerName != null && !flowerName.isEmpty() && !flowerName.isBlank()) {
@@ -56,6 +56,14 @@ public class Flower {
         if (cost > 0) {
             this.cost = cost;
         } else this.cost = 1;
+    }
+
+    public int getLifeSpan() {
+        return lifeSpan;
+    }
+
+    public void setLifeSpan(int lifeSpan) {
+        this.lifeSpan = lifeSpan;
     }
 
     @Override

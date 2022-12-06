@@ -16,8 +16,8 @@ public class Bouquet {
             if (flower != null) {
                 System.out.println(flower);
                 totalCost+= flower.getCost();
-                if (flower.lifeSpan < minLifeSpan) {
-                    minLifeSpan = flower.lifeSpan;
+                if (flower.getLifeSpan() < minLifeSpan) {
+                    minLifeSpan = flower.getLifeSpan();
                 }
             }
         }
