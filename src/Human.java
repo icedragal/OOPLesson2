@@ -1,11 +1,11 @@
 public class Human {
     String name;
-    int yearOfBirth;
-    String town;
+    private int yearOfBirth;
+    private String town;
     String jobTitle;
     Human(String name, int yearOfBirth, String town, String jobTitle){
 
-        if (name != null && !name.equals("")) {
+        if (name != null && !name.isEmpty() && !name.isBlank()) {
             this.name = name;
         } else this.name = "Информация не указана";
 
@@ -13,14 +13,34 @@ public class Human {
             this.yearOfBirth = yearOfBirth;
         } else this.yearOfBirth = 0;
 
-        if (town != null && !town.equals("")) {
+        if (town != null && !town.isEmpty() && !town.isBlank()) {
             this.town = town;
         } else this.town = "Информация не указана";
 
-        if (jobTitle != null && !jobTitle.equals("")) {
+        if (jobTitle != null && !jobTitle.isEmpty() && !jobTitle.isBlank()) {
             this.jobTitle = jobTitle;
         } else this.jobTitle = "Информация не указана";
 
+    }
+
+    public int getYearOfBirth() {
+        return yearOfBirth;
+    }
+
+    public void setYearOfBirth(int yearOfBirth) {
+        if (yearOfBirth >= 0) {
+            this.yearOfBirth = yearOfBirth;
+        } else this.yearOfBirth = 0;
+    }
+
+    public String getTown() {
+        return town;
+    }
+
+    public void setTown(String town) {
+        if (town != null && !town.isEmpty() && !town.isBlank()) {
+            this.town = town;
+        } else this.town = "Информация не указана";
     }
 
     @Override
